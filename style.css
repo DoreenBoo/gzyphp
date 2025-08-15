@@ -1,0 +1,241 @@
+/* 自定义字体 */
+@font-face {
+    font-family: 'ChunFengKai';
+    src: url('asset/font/演示春风楷.TTF') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* 全局样式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Microsoft YaHei', Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f5f5f5;
+}
+
+a {
+    text-decoration: none;
+    color: #1e88e5;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+ul {
+    list-style: none;
+}
+
+/* 头部导航 */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 2.2rem;
+    font-weight: bold;
+    color: #000000;
+    font-family: 'ChunFengKai', 'Microsoft YaHei', Arial, sans-serif;
+}
+
+nav ul {
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 2rem;
+}
+
+nav ul li a {
+    color: #555;
+    font-weight: 500;
+    padding: 0.5rem 0;
+    position: relative;
+}
+
+nav ul li a:hover {
+    color: #1e88e5;
+    text-decoration: none;
+}
+
+nav ul li a.active {
+    color: #1e88e5;
+}
+
+nav ul li a.active::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #1e88e5;
+}
+
+/* 主要内容区 */
+main {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.announcement-section, .about-section {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    padding: 2rem;
+}
+
+.announcement-section h1, .about-section h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #333;
+    font-size: 2rem;
+}
+
+.announcements {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.announcement-category h2 {
+    color: #1e88e5;
+    border-bottom: 2px solid #1e88e5;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.announcement-item {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.announcement-date {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.announcement-title {
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.announcement-content {
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.announcement-attachments h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.8rem;
+    color: #555;
+}
+
+.announcement-attachments ul li {
+    margin-bottom: 0.5rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.announcement-attachments ul li::before {
+    content: '📎';
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.announcement-attachments ul li a {
+    display: inline-block;
+    padding: 0.3rem 0;
+}
+
+/* 页脚 */
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    background-color: #333;
+    color: #fff;
+    margin-top: 2rem;
+}
+
+/* 关于我们页面样式 */
+.about-content {
+    line-height: 1.8;
+}
+
+.about-content h2 {
+    color: #1e88e5;
+    margin: 1.5rem 0 1rem 0;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 0.5rem;
+}
+
+.about-content p {
+    margin-bottom: 1rem;
+}
+
+.about-content strong {
+    font-weight: 600;
+    color: #555;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .logo {
+        margin-bottom: 1rem;
+    }
+
+    nav ul li {
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+
+    .announcement-section, .about-section {
+        padding: 1.5rem 1rem;
+    }
+
+    .announcement-item {
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .announcement-title {
+        font-size: 1.1rem;
+    }
+
+    .announcement-attachments ul li a {
+        font-size: 0.9rem;
+    }
+}
