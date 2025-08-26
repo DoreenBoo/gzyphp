@@ -1,8 +1,4 @@
-// 页面加载完成后执行
 document.addEventListener('DOMContentLoaded', function() {
-    // 模拟加载公示内容
-    // 实际项目中，这里可以通过AJAX从服务器获取内容，或者直接在HTML中嵌入内容
-    
     // 首次公示内容
     const firstAnnouncementContent = `
         
@@ -122,7 +118,6 @@ document.addEventListener('DOMContentLoaded', function() {
     attachmentLinks.forEach(link => {
         link.addEventListener('click', function(e) {
             console.log('下载附件:', this.getAttribute('href'));
-            // 这里可以添加下载统计或其他功能
         });
     });
 });
